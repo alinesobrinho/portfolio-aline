@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: rgba(12, 12, 15, .8);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.logo span{
+  color:#8B5CF6;
+}
+
+.menu{
+  display:flex;
+  gap:40px;
+  list-style:none;
+}
+
+.menu a{
+
+  color:white;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.menu a:hover{
+
+color:#8B5CF6;
+
+}

@@ -93,25 +93,63 @@
 
 /* Texto Bem-vindo */
 
-.typing {
+.typing-text {
   display: inline-block;
-
-  color: #ffffff;
 
   overflow: hidden;
 
   white-space: nowrap;
 
-  border-right: 2px solid #9b63ff;
-
   width: 0;
 
+  padding-right: 1px;
+
+  border-right: 2px solid #9b63ff;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 8px rgba(155, 99, 255, 0.35);
+
   animation:
-    typing 2s steps(10, end) forwards,
-    blink 0.8s infinite;
+    typing-loop 4s steps(11, end) infinite,
+    cursor-blink 0.8s step-end infinite;
 }
 
 
+@keyframes typing-loop {
+
+  0% {
+    width: 0;
+  }
+
+  40% {
+    width: 11ch;
+  }
+
+  65% {
+    width: 11ch;
+  }
+
+  100% {
+    width: 0;
+  }
+
+}
+
+
+@keyframes cursor-blink {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #9b63ff;
+  }
+
+}
 /* ========================================
    ANIMAÇÃO DIGITAÇÃO
 ======================================== */

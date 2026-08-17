@@ -1,261 +1,482 @@
+/* ========================================
+   HOME
+======================================== */
+
 .home {
   min-height: 100vh;
 
+  padding: 90px 5% 70px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
-  gap: 60px;
+  gap: 40px;
 
-  padding: 120px 8% 60px;
+  box-sizing: border-box;
 
   background:
     radial-gradient(
-      circle at 80% 50%,
-      rgba(139, 92, 246, 0.18),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 10% 90%,
-      rgba(168, 85, 247, 0.12),
-      transparent 30%
-    ),
-    #0b0b0f;
+      circle at 75% 45%,
+      rgba(132, 71, 255, 0.12),
+      transparent 38%
+    );
 
   color: #ffffff;
 }
 
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
 .content {
-  max-width: 600px;
-  z-index: 2;
+  flex: 0.9;
+
+  max-width: 650px;
 }
+
 
 .content > p:first-child {
-  color: #a1a1aa;
+  margin: 0 0 10px;
 
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: clamp(3.5rem, 6vw, 5rem);
-
-  line-height: 1.05;
-
-  margin: 0 0 15px;
-
-  font-weight: 700;
-}
-
-h1 span {
-  display: block;
-
-  color: #8b5cf6;
-
-  text-shadow:
-    0 0 30px rgba(139, 92, 246, 0.25);
-}
-
-h2 {
-  font-size: 2rem;
-
-  font-weight: 500;
-
-  margin-bottom: 20px;
-}
-
-.description {
-  max-width: 550px;
-
-  color: #a1a1aa;
+  color: #aaa6b8;
 
   font-size: 1.1rem;
 
-  line-height: 1.8;
-
-  margin-bottom: 40px;
+  font-weight: 500;
 }
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.content h1 {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 7vw, 6rem);
+
+  line-height: 1.02;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+}
+
+
+.content h1 span {
+  display: block;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9b63ff,
+      #c084fc,
+      #e879f9
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  text-shadow:
+    0 0 25px
+    rgba(155, 99, 255, 0.15);
+}
+
+
+/* ========================================
+   SUBTÍTULO
+======================================== */
+
+.content h2 {
+  margin: 22px 0 18px;
+
+  color: #d7d2df;
+
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+
+  font-weight: 500;
+}
+
+
+/* ========================================
+   DESCRIÇÃO
+======================================== */
+
+.description {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #aaa6b8;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
 
 .buttons {
   display: flex;
 
-  gap: 20px;
+  align-items: center;
 
-  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 32px;
 }
 
-button {
-  padding: 15px 35px;
 
-  border-radius: 50px;
+/* ========================================
+   BOTÕES - MESMO ESTILO
+======================================== */
 
-  border: none;
-
-  cursor: pointer;
-
-  font-size: 16px;
-
-  font-weight: 600;
-
-  transition: 0.3s ease;
-}
-
-.btn-primary {
-  background: #8b5cf6;
-
-  color: #ffffff;
-
-  box-shadow:
-    0 0 20px rgba(139, 92, 246, 0.25);
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 0 30px rgba(139, 92, 246, 0.55);
-}
-
+.hero-button,
 .btn-secondary {
-  background: #8b5cf6;
-
-  color: #ffffff;
-
-  box-shadow:
-    0 0 20px rgba(139, 92, 246, 0.25);
-}
-
-.btn-secondary:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 0 30px rgba(139, 92, 246, 0.55);
-}
-
-// IMAGEM
-
-.image {
-  position: relative;
-
-  width: min(48vw, 650px);
-
-  display: flex;
-
-  justify-content: center;
+  display: inline-flex;
 
   align-items: center;
 
-  z-index: 1;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border: 1px solid #9b63ff;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8d55f5,
+      #a56cff
+    );
+
+  color: #ffffff !important;
+
+  font-family: inherit;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px
+    rgba(155, 99, 255, 0.20);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
 }
 
-.image::before {
-  content: '';
 
-  position: absolute;
+.hero-button:visited,
+.hero-button:active,
+.btn-secondary:visited,
+.btn-secondary:active {
+  color: #ffffff !important;
 
-  width: 80%;
-
-  height: 80%;
-
-  border-radius: 50%;
-
-  background: rgba(139, 92, 246, 0.25);
-
-  filter: blur(80px);
-
-  z-index: -1;
+  text-decoration: none !important;
 }
+
+
+.hero-button:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    0 0 25px
+    rgba(155, 99, 255, 0.45);
+}
+
+
+/* ========================================
+   IMAGEM - GRANDE
+======================================== */
+
+.image {
+  flex: 1.2;
+
+  width: 100%;
+
+  max-width: 800px;
+
+  min-width: 550px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
 
 .image img {
   width: 100%;
+
+  max-width: 800px;
 
   height: auto;
 
   display: block;
 
-  filter:
-    drop-shadow(0 0 25px rgba(139, 92, 246, 0.25));
+  object-fit: contain;
 
-  animation: floating 5s ease-in-out infinite;
+  filter:
+    drop-shadow(
+      0 0 35px
+      rgba(155, 99, 255, 0.22)
+    );
+
+  animation:
+    floatImage 5s ease-in-out infinite;
 }
 
-@keyframes floating {
+
+/* ========================================
+   ANIMAÇÃO DA IMAGEM
+======================================== */
+
+@keyframes floatImage {
+
   0%,
   100% {
     transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
   }
+
 }
 
-// TABLET
 
-@media (max-width: 1000px) {
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
   .home {
+    padding: 100px 5% 70px;
+
     gap: 30px;
-
-    padding-left: 5%;
-    padding-right: 5%;
   }
 
-  h1 {
-    font-size: 3.5rem;
+
+  .content {
+    flex: 0.9;
+
+    max-width: 570px;
   }
 
-  h2 {
-    font-size: 1.6rem;
+
+  .content h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
   }
+
 
   .image {
-    width: 45vw;
+    flex: 1.1;
+
+    min-width: 450px;
+
+    max-width: 650px;
   }
+
+
+  .image img {
+    max-width: 650px;
+  }
+
 }
 
-// CELULAR
 
-@media (max-width: 768px) {
+/* ========================================
+   TABLET MENOR
+======================================== */
+
+@media (max-width: 850px) {
+
+  .home {
+    gap: 20px;
+  }
+
+
+  .content h1 {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+  }
+
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+
+  .image {
+    min-width: 380px;
+
+    max-width: 550px;
+  }
+
+
+  .image img {
+    max-width: 550px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 750px) {
+
   .home {
     min-height: auto;
 
+    padding: 100px 6% 70px;
+
     flex-direction: column;
 
-    justify-content: center;
+    align-items: center;
 
     text-align: center;
 
-    padding-top: 140px;
-
-    padding-bottom: 80px;
+    gap: 50px;
   }
+
 
   .content {
-    max-width: 100%;
+    width: 100%;
+
+    max-width: 650px;
   }
 
-  h1 {
-    font-size: 3.2rem;
+
+  .content > p:first-child {
+    font-size: 1rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
+
+  .content h1 {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+
+    letter-spacing: -1px;
   }
+
+
+  .content h2 {
+    font-size: 1.3rem;
+
+    margin: 18px 0;
+  }
+
 
   .description {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
   }
+
 
   .buttons {
-    justify-content: center;
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
   }
+
+
+  .hero-button,
+  .btn-secondary {
+    width: auto;
+
+    min-width: 180px;
+
+    box-sizing: border-box;
+  }
+
 
   .image {
-    width: 90vw;
+    width: 100%;
 
-    max-width: 550px;
+    min-width: 0;
 
-    margin-top: 30px;
+    max-width: 650px;
   }
+
+
+  .image img {
+    width: 100%;
+
+    max-width: 650px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE PEQUENO
+======================================== */
+
+@media (max-width: 450px) {
+
+  .home {
+    padding: 90px 5% 60px;
+  }
+
+
+  .content h1 {
+    font-size: 2.8rem;
+  }
+
+
+  .content h2 {
+    font-size: 1.15rem;
+  }
+
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+
+  .hero-button,
+  .btn-secondary {
+    width: 100%;
+
+    min-width: 0;
+  }
+
 }

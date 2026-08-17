@@ -1,1 +1,164 @@
-<p>projects works!</p>
+<section class="projects" id="projects">
+
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
+
+  <div class="projects-header">
+
+    <span class="section-tag">
+      &lt; projects /&gt;
+    </span>
+
+    <h2>
+      Meus
+      <span>Projetos</span>
+    </h2>
+
+    <p>
+      Projetos desenvolvidos para colocar em prática
+      meus conhecimentos em desenvolvimento e tecnologia.
+    </p>
+
+  </div>
+
+
+  <!-- =========================
+       GRID DE PROJETOS
+  ========================== -->
+
+  <div class="projects-grid">
+
+    <!-- =========================
+         MFE STORE
+    ========================== -->
+
+    <article class="project-card">
+
+      <!-- IMAGEM -->
+
+      <div class="project-image">
+
+        <img
+          src="/image/ecomerce.png"
+          alt="MFE Store - E-commerce"
+        />
+
+      </div>
+
+
+      <!-- CONTEÚDO -->
+
+      <div class="project-content">
+
+        <span class="project-type">
+          E-commerce
+        </span>
+
+        <h3>
+          MFE Store
+        </h3>
+
+        <p>
+          Aplicação de e-commerce responsiva desenvolvida
+          com arquitetura de Micro Frontends, integração
+          com API e componentes independentes.
+        </p>
+
+
+        <!-- TECNOLOGIAS -->
+
+        <div class="project-tech">
+
+          <span>React</span>
+          <span>Vite</span>
+          <span>Module Federation</span>
+          <span>Tailwind CSS</span>
+          <span>Axios</span>
+
+        </div>
+
+
+        <!-- BOTÕES -->
+
+        <div class="project-actions">
+
+          <button
+            type="button"
+            class="project-button"
+            (click)="openDemo()"
+          >
+            <span>▶</span>
+            Ver Demo
+          </button>
+
+
+          <a
+            href="https://github.com/alinesobrinho/mfe-store"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-button secondary"
+          >
+            <span>⌘</span>
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <!-- =========================
+       MODAL DO VÍDEO
+  ========================== -->
+
+  <div
+    class="video-modal"
+    *ngIf="showDemo"
+    (click)="closeDemo()"
+  >
+
+    <div
+      class="video-modal-content"
+      (click)="$event.stopPropagation()"
+    >
+
+      <!-- FECHAR -->
+
+      <button
+        type="button"
+        class="video-close"
+        (click)="closeDemo()"
+        aria-label="Fechar vídeo"
+      >
+        ×
+      </button>
+
+
+      <!-- VÍDEO -->
+
+      <video
+        controls
+        autoplay
+        playsinline
+        preload="metadata"
+      >
+
+        <source
+          src="/image/videoec.mp4"
+          type="video/mp4"
+        />
+
+        Seu navegador não suporta a reprodução deste vídeo.
+
+      </video>
+
+    </div>
+
+  </div>
+
+</section>

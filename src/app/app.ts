@@ -5,9 +5,11 @@ import { Home } from "./features/home/home";
 import { Footer } from "./core/layout/footer/footer";
 import { About } from './features/about/about';
 import { Skills } from "./features/skills/skills";
+import { Projects } from "./features/projects/projects";
+import { Contact } from "./features/contact/contact";
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Home, Footer, About, Skills],
+  imports: [Navbar, Home, Footer, About, Skills, Projects, Contact],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

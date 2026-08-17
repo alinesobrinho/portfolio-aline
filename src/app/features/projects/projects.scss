@@ -1,0 +1,597 @@
+/* ========================================
+   PROJECTS
+======================================== */
+
+.projects {
+  min-height: 100vh;
+
+  padding: 120px 8% 100px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(132, 71, 255, 0.10),
+      transparent 35%
+    );
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.projects-header {
+  max-width: 800px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: #9b63ff;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 12px rgba(155, 99, 255, 0.6);
+}
+
+.projects-header h2 {
+  margin: 0 0 18px;
+
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  font-weight: 700;
+}
+
+.projects-header h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #9b63ff,
+      #c084fc
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+.projects-header p {
+  margin: 0;
+
+  color: #aaa6b8;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.projects-grid {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  );
+
+  gap: 30px;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.project-card {
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 24, 48, 0.95),
+      rgba(14, 12, 23, 0.98)
+    );
+
+  border: 1px solid
+    rgba(150, 93, 255, 0.35);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.35),
+
+    inset 0 0 30px
+    rgba(135, 73, 255, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(170, 110, 255, 0.8);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.45),
+
+    0 0 25px
+    rgba(130, 70, 255, 0.15);
+}
+
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.project-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 330px;
+
+  overflow: hidden;
+
+  background: #0d0b15;
+}
+
+.project-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.project-card:hover
+.project-image img {
+  transform: scale(1.03);
+}
+
+
+/* ========================================
+   BOTÃO PLAY SOBRE A IMAGEM
+======================================== */
+
+.project-play {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.5);
+
+  border-radius: 50%;
+
+  background:
+    rgba(15, 10, 25, 0.75);
+
+  backdrop-filter: blur(8px);
+
+  color: #ffffff;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 20px
+    rgba(155, 99, 255, 0.5);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-play span {
+  margin-left: 4px;
+}
+
+.project-play:hover {
+  transform:
+    translate(-50%, -50%)
+    scale(1.1);
+
+  background:
+    rgba(155, 99, 255, 0.85);
+
+  box-shadow:
+    0 0 30px
+    rgba(155, 99, 255, 0.8);
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.project-content {
+  padding: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+/* ========================================
+   CATEGORIA
+======================================== */
+
+.project-type {
+  align-self: flex-start;
+
+  margin-bottom: 12px;
+
+  padding: 6px 12px;
+
+  border: 1px solid
+    rgba(155, 99, 255, 0.3);
+
+  border-radius: 20px;
+
+  background:
+    rgba(155, 99, 255, 0.1);
+
+  color: #a56cff;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.project-content h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 1.6rem;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   DESCRIÇÃO
+======================================== */
+
+.project-content p {
+  margin: 0 0 22px;
+
+  color: #aaa6b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   TECNOLOGIAS
+======================================== */
+
+.project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.project-tech span {
+  padding: 6px 10px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color: #c8c2d4;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.project-actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: auto;
+}
+
+.project-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #9b63ff;
+
+  border-radius: 10px;
+
+  background: #9b63ff;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 18px
+    rgba(155, 99, 255, 0.5);
+}
+
+
+/* GITHUB */
+
+.project-button.secondary {
+  background: transparent;
+
+  border-color:
+    rgba(155, 99, 255, 0.4);
+
+  color: #c8c2d4;
+}
+
+.project-button.secondary:hover {
+  background:
+    rgba(155, 99, 255, 0.1);
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.video-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    rgba(5, 4, 9, 0.88);
+
+  backdrop-filter: blur(10px);
+
+  animation:
+    modalFade 0.25s ease;
+}
+
+@keyframes modalFade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* ========================================
+   VÍDEO
+======================================== */
+
+.video-modal-content {
+  position: relative;
+
+  width: min(1100px, 95vw);
+
+  max-height: 90vh;
+
+  padding: 10px;
+
+  border: 1px solid
+    rgba(155, 99, 255, 0.5);
+
+  border-radius: 20px;
+
+  background:
+    #0e0c17;
+
+  box-shadow:
+    0 0 40px
+    rgba(155, 99, 255, 0.25);
+}
+
+.video-modal-content video {
+  width: 100%;
+
+  max-height: 85vh;
+
+  display: block;
+
+  border-radius: 14px;
+}
+
+
+/* ========================================
+   FECHAR
+======================================== */
+
+.video-close {
+  position: absolute;
+
+  top: -18px;
+
+  right: -18px;
+
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+
+  background:
+    #181322;
+
+  color: #ffffff;
+
+  font-size: 1.5rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.video-close:hover {
+  transform: scale(1.08);
+
+  background:
+    #9b63ff;
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 600px) {
+
+  .projects {
+    padding: 90px 5% 60px;
+  }
+
+  .project-image {
+    height: 240px;
+  }
+
+  .project-content {
+    padding: 24px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-button {
+    width: 100%;
+  }
+
+  .video-modal {
+    padding: 15px;
+  }
+
+  .video-close {
+    top: -12px;
+    right: -5px;
+  }
+
+}

@@ -1,9 +1,5 @@
 <section class="contact" id="contact">
 
-  <!-- =========================
-       CABEÇALHO
-  ========================== -->
-
   <div class="contact-header">
 
     <span class="section-tag">
@@ -11,63 +7,54 @@
     </span>
 
     <h2>
-      Vamos
-      <span>conversar?</span>
+      Entre em
+      <span>contato</span>
     </h2>
 
     <p>
-      Estou aberta a novas oportunidades,
-      projetos e conexões profissionais.
+      Tem um projeto em mente ou quer conversar sobre uma oportunidade?
+      Envie uma mensagem.
     </p>
 
   </div>
 
 
-  <!-- =========================
-       CONTEÚDO
-  ========================== -->
-
   <div class="contact-container">
 
-
-    <!-- =========================
-         INFORMAÇÕES
-    ========================== -->
+    <!-- INFORMAÇÕES -->
 
     <div class="contact-info">
 
-      <h3>
-        Entre em contato
-      </h3>
+      <h3>Vamos conversar?</h3>
 
       <p>
-        Se você quiser conversar sobre uma oportunidade,
-        projeto ou simplesmente trocar uma ideia,
-        fique à vontade para entrar em contato.
+        Estou aberta a novas oportunidades, projetos e conexões
+        profissionais.
       </p>
 
 
       <!-- E-MAIL -->
 
       <a
-        href="mailto:seuemail@email.com"
+        href="mailto:SEU_EMAIL@email.com"
         class="contact-item"
       >
-    <div class="contact-icon">
-  <img
-    src="/image/email.png"
-    alt="Ícone de e-mail"
-  />
-   </div>
+
+        <div class="contact-icon">
+
+          <img
+            src="/image/email.png"
+            alt="Ícone de e-mail"
+          />
+
+        </div>
 
         <div class="contact-item-content">
 
-          <span>
-            E-mail
-          </span>
+          <span>E-mail</span>
 
           <strong>
-            alinesobrinho11@gmail.com
+           alinesobrinho11@gmail.com
           </strong>
 
         </div>
@@ -84,18 +71,18 @@
         class="contact-item"
       >
 
-       <div class="contact-icon">
-      <img
-    src="/image/linkedin.png"
-    alt="Ícone do LinkedIn"
-     />
-     </div>
+        <div class="contact-icon">
+
+          <img
+            src="/image/linkedin.png"
+            alt="Ícone do LinkedIn"
+          />
+
+        </div>
 
         <div class="contact-item-content">
 
-          <span>
-            LinkedIn
-          </span>
+          <span>LinkedIn</span>
 
          
 
@@ -114,19 +101,19 @@
       >
 
         <div class="contact-icon">
-       <img
-    src="/image/githubcontato.png"
-    alt="Ícone do GitHub"
-      />
-    </div>
+
+          <img
+            src="/image/githubcontato.png"
+            alt="Ícone do GitHub"
+          />
+
+        </div>
 
         <div class="contact-item-content">
 
-          <span>
-            GitHub
-          </span>
+          <span>GitHub</span>
 
-      
+          
 
         </div>
 
@@ -135,18 +122,18 @@
     </div>
 
 
-    <!-- =========================
-         FORMULÁRIO
-    ========================== -->
+    <!-- FORMULÁRIO -->
 
     <div class="contact-form-wrapper">
 
-      <h3>
-        Envie uma mensagem
-      </h3>
+      <h3>Envie uma mensagem</h3>
 
-      <form class="contact-form">
 
+      <form
+        class="contact-form"
+        (ngSubmit)="sendMessage()"
+        #contactForm="ngForm"
+      >
 
         <!-- NOME -->
 
@@ -159,7 +146,10 @@
           <input
             id="name"
             type="text"
+            name="name"
+            [(ngModel)]="formData.name"
             placeholder="Seu nome"
+            required
           />
 
         </div>
@@ -176,7 +166,10 @@
           <input
             id="email"
             type="email"
+            name="email"
+            [(ngModel)]="formData.email"
             placeholder="seu@email.com"
+            required
           />
 
         </div>
@@ -192,11 +185,35 @@
 
           <textarea
             id="message"
-            rows="6"
-            placeholder="Escreva sua mensagem..."
+            name="message"
+            [(ngModel)]="formData.message"
+            placeholder="Digite sua mensagem..."
+            required
           ></textarea>
 
         </div>
+
+
+        <!-- MENSAGEM DE SUCESSO -->
+
+        @if (successMessage) {
+
+          <div class="form-success">
+            ✓ {{ successMessage }}
+          </div>
+
+        }
+
+
+        <!-- MENSAGEM DE ERRO -->
+
+        @if (errorMessage) {
+
+          <div class="form-error">
+            {{ errorMessage }}
+          </div>
+
+        }
 
 
         <!-- BOTÃO -->
@@ -204,15 +221,26 @@
         <button
           type="submit"
           class="contact-button"
+          [disabled]="isSending"
         >
 
-          <span>
-            Enviar mensagem
-          </span>
+          @if (!isSending) {
 
-          <span class="send-icon">
-            →
-          </span>
+            <span>
+              Enviar mensagem
+            </span>
+
+            <span class="send-icon">
+              →
+            </span>
+
+          } @else {
+
+            <span>
+              Enviando...
+            </span>
+
+          }
 
         </button>
 
